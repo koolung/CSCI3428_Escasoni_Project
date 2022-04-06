@@ -1,0 +1,353 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Nunito';
+  background-color:#909ca4;
+  background-image: url(./img/background.jpg);
+  background-size: cover;
+  overflow-x: hidden;
+}
+
+.App {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: 2fr 1fr 2fr;
+  margin-left:14%;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Author: Vitor Jeronimo (A00431599) */
+.VoteScreen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  border: 1px solid #777;
+  border-radius: 5px;
+  height: 90vh;
+  width: 60%;
+  margin: 20px auto;
+}
+
+/* Author: Vitor Jeronimo (A00431599) */
+.VoteScreen > h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+/* Author: Vitor Jeronimo (A00431599) */
+.VoteScreen .WordList {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  width: 80%;
+  /* border: 2px red solid; */
+}
+
+/* Author: Vitor Jeronimo (A00431599) */
+.WordList .Word {
+  /* border: green solid 1px; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.Word label, .Word button {
+  margin: 5px;
+}
+
+.Word .ContentLeft label {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.Word .ContentRight .PlayerLabel {
+  font-size: 18;
+  font-weight: 400;
+  color: #333;
+}
+
+.ContentRight .BtnVote {
+  border: none;
+  border-radius: 2px;
+  font-weight: 600;
+  padding: 8px 16px;
+}
+
+.ContentRight .BtnVote:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.ContentRight .VoteYes {
+  background-color: #24bc16;
+}
+
+.ContentRight .VoteNo {
+  background-color: #f43030;
+}
+
+.InitialLetter {
+  /* Grid placement properties */
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+
+  /* Style properties*/
+  font-weight: bold;
+  font-size: 12em;
+  text-align: center;
+  background-color: rgba(144, 156, 164, 0.7);
+  border: 3px solid rgba(0, 0, 0, 0.8);
+
+}
+
+.Timer {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+
+  /* Style properties */
+  background-color: rgba(144, 156, 164, 0.7);
+  border: 3px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 100px;
+  text-align: center;
+}
+
+.ActionButtons {
+  /* Button positioning properties */
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 3;
+  grid-row-end: 4;
+
+  /* Button style properties */
+  background-color: rgba(144, 156, 164, 0.7);
+  border: 3px solid rgba(0, 0, 0, 0.8);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.btn {
+ /* Button style properties */
+  background-color: #000000;
+  border: none;
+  color: white;
+  padding: 12px 12px;
+  margin: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.btn:hover {
+  background-color:#606d76;
+  border: none;
+  color: white;
+  padding: 12px 12px;
+  margin: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.CategoryList {
+  /* Grid placement properties */
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 4;
+
+  /* Positioning properties */
+  height: 100%;
+  width: 100%;
+}
+
+.CategoriesContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+  width: 60%;
+  background-color: rgba(144, 156, 164, 0.7);
+  border: 3px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+}
+
+.Category {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin: 20px 30px;
+  height: 40px;
+}
+
+.Category label {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.Category input {
+  border: none;
+  border-bottom: 2px solid #333;
+  font-size: 20px;
+  height: 100%;
+  width: 50%;
+  background-color: rgba(144, 156, 164, 0);
+}
+
+input:focus {
+  outline: none;
+  background-color: rgba(144, 156, 164, 0.9);
+}
+
+.loginPage{
+  position: absolute;
+  left: 18vw;
+  height: 600px;
+  width: 800px;
+  margin-top: 80px;
+  border: rgba(0, 0, 0, 0.8);
+  background-color: rgba(144, 156, 164, 0.7);
+}
+
+.pageLogo{
+  position: absolute;
+  left: 18%;
+  top: 15%;
+  font-size: 10em;
+  font-weight:bold;
+  background-color: rgba(0, 0, 0, 0);
+}
+.uName{
+    position: absolute;
+    text-align: center;
+    right: 24vw;
+    top: 50vh;
+    height: 40px;
+    width:170px;
+    resize:none;
+    background-color: rgba(255, 255, 255, 1);
+    border: 3px solid rgba(0, 0, 0, 0.8);
+}
+.uName:focus{
+  background-color:white;
+}
+.rID{
+    position: absolute;
+    text-align: center;
+    right: 24vw;
+    top: 56vh;
+    height:40px;
+    width:170px;
+    border: 3px solid rgba(0, 0, 0, 0.8);
+}
+.rID:focus{
+  background-color:white;
+}
+.joinButton{
+    position: absolute;
+    right: 24vw;
+    top: 62vh;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    height:40px;
+    width:170px;
+    border: 3px solid rgba(0, 0, 0, 0.8);
+}
+.joinButton:hover{
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+
+.openButton {
+  position:absolute;
+  top:20px;
+  left:45px;
+  font-size:60px;
+  background-color:#000000;
+}
+
+ .overlay {
+  height: 100%;
+  width: 0;
+  position: fixed; 
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: rgb(255,255,255); 
+  background-color: rgba(255,255,255, 0.9); 
+  overflow-x: hidden;
+  transition: 0.5s;
+ }
+
+.overlay-content {
+  position: relative;
+  top: 25%; 
+  width: 100%;
+  text-align: center; 
+  margin-top: 30px;
+}
+
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  left: 45px;
+  font-size: 60px;
+  background-color:#000000;
+}
+
+
+.time {
+  /* color: #602b0e; */
+  font-size: 100px;
+  /* -webkit-text-stroke: 1px black; */
+}
+
+.timerButtons {
+  margin: 0 auto;
+  display: inline;
+}
+
+.button {
+  /* background-color: #935637; */
+  /* border-radius: 25%; */
+  /* border-color: black;
+  color: black;
+  font-size: 20px;
+  padding: 20px;
+  margin: 0px 10px 20px 10px;
+  display: inline; */
+background-color: #000000;
+border: none;
+color: white;
+padding: 12px 12px;
+margin: 10px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
+}
