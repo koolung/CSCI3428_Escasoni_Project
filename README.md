@@ -20,7 +20,7 @@ fun!
 ## Installation
 - Requires [NodeJS](https://nodejs.org/en/download/) v14+
 
-Clone this repository with `git clone https://github.com/VitorJeronimo/CSCI3428_Eskasoni_Project.git` or download the source code from https://github.com/VitorJeronimo/CSCI3428_Eskasoni_Project
+Clone this repository with `git clone https://github.com/koolung/CSCI3428_Eskasoni_Project.git` or download the source code from https://github.com/koolung/CSCI3428_Eskasoni_Project
 > Before proceeding, don't forget to change the hostname on`client/src/App.js` and `server/server.js` to `http://localhost:PORT`, or the address to your server.
 
 After that, go to the project's directory and run the `build_app.sh` script to install all required dependencies and build the application.
